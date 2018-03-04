@@ -16,12 +16,25 @@ const createProtoMagicObject = () => {
     return a;
 };
 
-const incrementor = () => {};
-const asyncIncrementor = () => {};
-const createIncrementer = () => {};
+let count1 = 0;
+Function.prototype.valueOf = function(){
+    return count1;
+}
+const incrementor = () => {
+    count1 ++;
+    return incrementor
+};
 
-const returnBackInSecond = () => {};
-const getDeepPropertiesCount = () => {};
+let count2 = 0;
+const asyncIncrementor = () => {
+    return new Promise((resolve) => {
+        count2++;
+        return resolve(count2);
+    })
+};
+const createIncrementer = () => {};
+const returnBackInSecond = (arg) => {};
+const getDeepPropertiesCount = (obj) => {};
 const createSerializedObject = () => {
     return Object(1);
 };
