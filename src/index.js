@@ -27,7 +27,7 @@ const getDeepPropertiesCount = () => {};
 const createSerializedObject = () => {};
 const toBuffer = () => {};
 const sortByProto = (array) => {
-    return array.map( (item) => { return item.__proto__; }).sort( (x,y) => { retyrn x - y; );
+    return array.map( (item) => { return item.__proto__; }).sort( (x,y) => { retyrn x - y; });
 };
 
 exports.createEnumerableProperty = createEnumerableProperty;
